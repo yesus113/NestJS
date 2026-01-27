@@ -1,25 +1,24 @@
 import {
-  IsBoolean,
   IsEmail,
   IsNotEmpty,
-  IsNumber,
   IsString,
+  MaxLength,
+  MinLength,
 } from 'class-validator';
 
 export class CreateUserDto {
+  @IsString()
+  @IsNotEmpty()
+  @MaxLength(24)
+  username: string;
+
   @IsEmail()
+  @MaxLength(100)
+  @IsNotEmpty()
   email: string;
 
-  @IsString({ message: 'Name should be a string value.' })
+  @MinLength(5)
+  @MaxLength(20)
   @IsNotEmpty()
-  name: string;
-
-  @IsNumber()
-  age: number;
-
-  @IsString()
-  gender?: string;
-
-  @IsBoolean()
-  isMarried: boolean;
+  password: string;
 }
