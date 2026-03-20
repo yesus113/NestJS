@@ -8,6 +8,7 @@ export class AuthService {
   ) {}
 
   isAuth: boolean = false;
+  /*
 
   login(email: string, password: string) {
     const user = this.usersService.users.find(
@@ -18,5 +19,5 @@ export class AuthService {
       return 'MY_TOKEN';
     }
     return 'User does not exist';
-  }
+  }*/
 }
