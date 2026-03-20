@@ -10,6 +10,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { User } from './users/entity/users.entity';
 import { appConfig } from './config/app.config';
 import { ProfileModule } from './profile/profile.module';
+import { StripeModule } from './stripe/stripe/stripe.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -36,6 +37,7 @@ import { ProfileModule } from './profile/profile.module';
     TweetModule,
     AuthModule,
     ProfileModule,
+    StripeModule,
   ], // All the time import the modules to be able to use it
   controllers: [AppController], //As well the controllers
   providers: [AppService], //And the providers
