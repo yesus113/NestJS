@@ -22,12 +22,5 @@ export class TweetService {
     },
   ];
 
-  getTweets(userId: number) {
-    const user = this.usersService.getUserById(userId);
-    const tweets = this.tweets.filter((t) => t.userId === userId);
-    const response = tweets.map((t) => {
-      return { text: t.text, date: t.date, name: user.name };
-    });
-    return response;
-  }
+  getTweets() {}
 }
