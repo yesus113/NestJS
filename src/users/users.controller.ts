@@ -19,10 +19,13 @@ export class UsersController {
     console.log(typeof id, id);
     return this.usersService.getUserById(id); //+id covert the string value to number with '+'
   }
+
+  @Get()
+  getAll() {
+    return this.usersService.getAllUsers();
+  }
   @Post() //the following method only handle POST requests
   createUser(@Body() user: CreateUserDto) {
-    //this.usersService.createUser(user);
-    console.log(user);
-    return 'A new user has been created';
+    return this.usersService.createUser(user);
   }
 }

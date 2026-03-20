@@ -7,6 +7,6 @@ export class TweetController {
 
   @Get(['', ':userId'])
   public getTweet(@Param('userId', ParseIntPipe) userId: number) {
-    return this.tweetService.getTweets(userId);
+    return this.tweetService.getTweets();
   }
 }

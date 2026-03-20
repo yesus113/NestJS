@@ -7,7 +7,7 @@ export class Profile {
 
   @Column({
     type: 'varchar',
-    nullable: false,
+    nullable: true,
     length: 255,
   })
   name: string;
@@ -15,14 +15,14 @@ export class Profile {
   @Column({
     type: 'varchar',
     length: 255,
-    nullable: false,
+    nullable: true,
   })
   lastname: string;
 
   @Column({
     type: 'varchar',
     length: 255,
-    nullable: false,
+    nullable: true,
   })
   gender: string;
 
